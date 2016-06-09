@@ -12,13 +12,13 @@ import java.util.concurrent.TimeUnit;
 public class ObservableCreationUsingInterval implements Program {
 
     private static final int INITIAL_DELAY_IN_SECONDS = 0;
-    private static final int INTERVAL_IN_SECONDS = 1;
+    private static final int PERIOD = 1;
 
 
     @Override
     public void run() {
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        Observable.interval(INITIAL_DELAY_IN_SECONDS, INTERVAL_IN_SECONDS, TimeUnit.SECONDS)
+        Observable.interval(INITIAL_DELAY_IN_SECONDS, PERIOD, TimeUnit.SECONDS)
                 .subscribe(
                         System.out::println,
                         throwable -> System.out.println(throwable.getMessage()),
@@ -35,6 +35,6 @@ public class ObservableCreationUsingInterval implements Program {
     }
 
     public static void main(String[] args) {
-        new ObservableCreationUsingTimer().run();
+        new ObservableCreationUsingInterval().run();
     }
 }

@@ -19,11 +19,13 @@ public class SubscribeOnExample2 implements Program {
     public void run() {
         CountDownLatch countDownLatch = new CountDownLatch(1);
         LinesFromTxtFileObservable.create(IT_TERMS_FILENAME)
+                .doOnEach(RxJavaUtils.debug("Before flatmap on io"))
                 .flatMap(itTerm -> LinesFromTxtFileObservable.create(CHUCK_NORRIS_JOKES_FILENAME)
                         .filter(string -> string.toLowerCase().contains(itTerm.toLowerCase()))
                         .subscribeOn(Schedulers.computation())
                 )
-                .doOnEach(RxJavaUtils.debug())
+                .doOnEach(RxJavaUtils.debug("After flatmap on computation"))
+                .subscribeOn(Schedulers.io())
                 .subscribe(
                         System.out::println,
                         System.err::print,

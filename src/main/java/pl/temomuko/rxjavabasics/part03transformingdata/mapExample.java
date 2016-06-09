@@ -13,8 +13,13 @@ public class MapExample implements Program {
     public void run() {
         Observable.just("dijkstra", "gates", "torvalds", "lovelace", "neumann")
                 .map(StringUtils::capitalize)
+                .map(str -> {
+                    str += "a";
+                    return str;
+                })
+                .toList()
                 .subscribe(
-                        string -> System.out.print(string + " "),
+                        System.out::print,
                         throwable -> System.out.println(throwable.getMessage()),
                         () -> System.out.print("\n  Completed")
                 );

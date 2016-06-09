@@ -2,6 +2,8 @@ package pl.temomuko.rxjavabasics.part01basicobservablecreation;
 
 import pl.temomuko.rxjavabasics.util.Program;
 import rx.Observable;
+import rx.functions.Action0;
+import rx.functions.Action1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +19,7 @@ public class ObservableCreationUsingFrom implements Program {
         Observable.from(list).subscribe(
                 System.out::print,
                 throwable -> System.out.print(throwable.getMessage()),
-                () -> System.out.print("\n  Completed")
+                () -> System.out.print("\n    Completed")
         );
     }
 

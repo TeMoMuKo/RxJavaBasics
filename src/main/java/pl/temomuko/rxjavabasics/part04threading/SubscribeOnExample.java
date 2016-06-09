@@ -18,7 +18,7 @@ public class SubscribeOnExample implements Program {
     public void run() {
         CountDownLatch countDownLatch = new CountDownLatch(1);
         LinesFromTxtFileObservable.create(CHUCK_NORRIS_JOKES_FILENAME)
-                .doOnEach(RxJavaUtils.debug())
+                .doOnEach(RxJavaUtils.debug("Subscribed on io"))
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                         System.out::println,

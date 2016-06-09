@@ -16,7 +16,6 @@ public class FlatMapExample implements Program {
     public void run() {
         Observable.just("Dijkstra", "Gates", "Torvalds", "Lovelace", "Neumann")
                 .flatMap(CharsFromStringObservable::create)
-                .subscribeOn(Schedulers.io())
                 .subscribe(
                         System.out::print,
                         throwable -> System.out.println(throwable.getMessage()),
