@@ -1,4 +1,4 @@
-package pl.temomuko.rxjavabasics.part01observablecreation;
+package pl.temomuko.rxjavabasics.part01basicobservablecreation;
 
 import pl.temomuko.rxjavabasics.util.Program;
 import rx.Observable;
@@ -6,25 +6,21 @@ import rx.Observable;
 /**
  * Created by Rafał on 08.06.2016.
  */
-public class ObservableCreationUsingInterval implements Program {
+public class ObservableCreationUsingRange implements Program {
 
     private static final int RANGE_START = 1;
     private static final int RANGE_COUNT = 10;
 
     @Override
     public void run() {
-        getRangeObservable().subscribe(
+        Observable.range(RANGE_START, RANGE_COUNT).subscribe(
                 System.out::println,
                 throwable -> System.out.println(throwable.getMessage()),
-                () -> System.out.println("Completed")
+                () -> System.out.print("\n  Completed")
         );
     }
 
-    private Observable<Integer> getRangeObservable() {
-        return Observable.range(RANGE_START, RANGE_COUNT);
-    }
-
     public static void main(String[] args) {
-        new ObservableCreationUsingInterval().run();
+        new ObservableCreationUsingRange().run();
     }
 }

@@ -1,0 +1,21 @@
+Chuck Norris can instantiate an abstract class.
+Chuck Norris knows the value of NULL, and he can sort by it too.
+Chuck Norris's database has only one table, 'Kick', which he DROPs frequently.
+Chuck Norris's OSI network model has only one layer - Physical.
+Chuck Norris can divide by zero.
+Chuck Norris went out of an infinite loop.
+Chuck Norris can delete the Recycling Bin.
+Chuck Norris programs occupy 150% of CPU, even when they are not executing.
+Chuck Norris does not code in cycles, he codes in strikes.
+Chuck Norris doesn't use reflection, reflection asks politely for his help.
+Chuck Norris doesn't need garbage collection because he doesn't call .Dispose(), he calls .DropKick().
+Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris.
+Chuck Norris can do a wheelie on a unicycle.
+Chuck Norris is the ultimate mutex, all threads fear him.
+Chuck Norris programs do not accept input.
+Chuck Norris can access the DB from the UI.
+Chuck Norris' programs never exit, they terminate.
+Chuck Norris could use anything in java.util.* to kill you, including the javadocs.
+Chuck Norris can dereference NULL.
+Chuck Norris insists on strongly-typed programming languages.
+When Chuck Norris break the build, you can't fix it, because there is not a single line of code left.
